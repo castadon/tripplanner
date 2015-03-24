@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+ 	{% block content%}
+ 	
+ 		<h1>HOTELS</h1>
+ 		<ul>
+		{% if all_hotels.length > 0 %}
+		  <ul>
+		    {% for hotel in all_hotels %}
+		      <li>{{hotel.name}}</li>
+		    {% endfor %}
+		  </ul>
+		{% else %}
+		  There are no hotels.
+		{% endif %}
+		</ul>
+
+		<h1>RESTAURANTS</h1>
+		 <ul>
+		{% if all_restaurants.length > 0 %}
+		  <ul>
+		    {% for restaurant in all_restaurants %}
+		      <li>{{restaurant.name}}</li>
+		    {% endfor %}
+		  </ul>
+		{% else %}
+		  There are no restaurants.
+		{% endif %}
+		</ul>
+
+		<h1>THINGS TO DO</h1>
+ 		<ul>
+		{% if all_things_to_do.length > 0 %}
+		  <ul>
+		    {% for thingtodo in all_things_to_do %}
+		      <li>{{thingtodo.name}}</li>
+		    {% endfor %}
+		  </ul>
+		{% else %}
+		  There are no things to do.
+		{% endif %}
+		</ul>
+
+
+ 	{% endblock%}
