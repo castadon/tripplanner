@@ -2,12 +2,12 @@
   box-sizing: border-box;
 }
 
-body{
-	color:red;
-}
-
 $navbar-color: #A6C6DA;
 $navbar-background: #736357;
+
+body {
+	background-color:#C2B5AD;
+}
 
 .container { width: 100%; }
 .row { height: 100vh; overflow:hidden; padding-top:50px; }
@@ -19,6 +19,35 @@ $navbar-background: #736357;
 .col-lg-3 {
 	height: 100%;
 	overflow: auto;
+}
+
+@media (max-width: 800px){
+
+	.navbar-toggle{
+		display:block;
+		
+	}
+	.navbar-inverse .navbar-toggle .icon-bar{
+		background-color:$navbar-color;
+	}
+	
+	.row {
+		overflow:auto;
+	}
+	.our-col-sm-6 {
+		width:50%;
+		display:block;
+		float:left;
+		padding:3%;
+	}
+	.col-lg-3 {
+		width:100%;
+		height:auto;
+	}
+	.col-lg-9 {
+		width:100%;
+		padding:5%;
+	}
 }
 
 .navbar {
@@ -61,5 +90,87 @@ $navbar-background: #736357;
 }
 
 .map-canvas {
-	height: 100vh;
+	height: 90vh;
+}
+
+.panel {
+	margin-top: 20px;
+	border-radius: 10px;
+	overflow:hidden;
+}
+
+.panel-body{
+	background-color:#EFECEA;
+}
+
+.panel-default > .panel-heading{
+	background-color:$navbar-background;
+}
+
+.pagination {
+	margin:0px;
+
+	a{
+		margin-right:8px;
+		border-radius:100% !important;
+	}
+}
+
+#top-panel .selectcategory {
+	margin-bottom:10px;
+	label {
+		color:#AEAEAE;
+		display:block;
+		width:100%;
+		font-size: 1.5em;
+	}
+	select {
+		display:block;
+		width:80%;
+		float:left;
+	}
+	a {
+		margin-left: 10px;
+		display:block;
+		float:left;
+	}
+}
+
+.datedisplay {
+	width:100%;
+	text-align:center;
+	span {
+		padding:4px;
+		border: 2px solid black;
+		border-radius:5px;
+	}
+	i {
+		color:red;
+		margin-left:4px;
+	}
+}
+
+#myDayListPanel {
+	.selectcategory {
+		margin-bottom:12px;
+		label {
+		color:#AEAEAE;
+		display:block;
+		width:100%;
+		font-size: 1.5em;
+		}
+	}
+	ul {
+		padding: 0px;
+		li{
+			list-style: none;
+			display:block;
+			float:left;
+		}
+		a {
+			color:red;
+			display:block;
+			float:right;
+		}
+	}
 }

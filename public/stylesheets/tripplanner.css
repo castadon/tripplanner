@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 body {
-  color: red; }
+  background-color: #C2B5AD; }
 
 .container {
   width: 100%; }
@@ -18,6 +18,25 @@ body {
 .col-lg-3 {
   height: 100%;
   overflow: auto; }
+
+@media (max-width: 800px) {
+  .navbar-toggle {
+    display: block; }
+  .navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #A6C6DA; }
+  .row {
+    overflow: auto; }
+  .our-col-sm-6 {
+    width: 50%;
+    display: block;
+    float: left;
+    padding: 3%; }
+  .col-lg-3 {
+    width: 100%;
+    height: auto; }
+  .col-lg-9 {
+    width: 100%;
+    padding: 5%; } }
 
 .navbar {
   position: fixed;
@@ -40,4 +59,66 @@ body {
       background: #39312b; }
 
 .map-canvas {
-  height: 100vh; }
+  height: 90vh; }
+
+.panel {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden; }
+
+.panel-body {
+  background-color: #EFECEA; }
+
+.panel-default > .panel-heading {
+  background-color: #736357; }
+
+.pagination {
+  margin: 0px; }
+  .pagination a {
+    margin-right: 8px;
+    border-radius: 100% !important; }
+
+#top-panel .selectcategory {
+  margin-bottom: 10px; }
+  #top-panel .selectcategory label {
+    color: #AEAEAE;
+    display: block;
+    width: 100%;
+    font-size: 1.5em; }
+  #top-panel .selectcategory select {
+    display: block;
+    width: 80%;
+    float: left; }
+  #top-panel .selectcategory a {
+    margin-left: 10px;
+    display: block;
+    float: left; }
+
+.datedisplay {
+  width: 100%;
+  text-align: center; }
+  .datedisplay span {
+    padding: 4px;
+    border: 2px solid black;
+    border-radius: 5px; }
+  .datedisplay i {
+    color: red;
+    margin-left: 4px; }
+
+#myDayListPanel .selectcategory {
+  margin-bottom: 12px; }
+  #myDayListPanel .selectcategory label {
+    color: #AEAEAE;
+    display: block;
+    width: 100%;
+    font-size: 1.5em; }
+#myDayListPanel ul {
+  padding: 0px; }
+  #myDayListPanel ul li {
+    list-style: none;
+    display: block;
+    float: left; }
+  #myDayListPanel ul a {
+    color: red;
+    display: block;
+    float: right; }

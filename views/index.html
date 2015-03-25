@@ -2,56 +2,97 @@
 
 {% block content%}
 <div class="container">
-<div class = "row">
-<div class="col-lg-9">
-	<div id="map-canvas" class="map-canvas">
-	</div>
-</div>
-<div class="col-lg-3">
+	<div class = "row">
+		<div class="col-lg-9">
+			<div id="map-canvas" class="map-canvas">
+			</div>
+		</div>
+		<div class="col-lg-3">
 
+			<div class="our-col-sm-6">
 
- 		<h1>HOTELS</h1>
- 		<ul>
-		{% if all_hotels.length > 0 %}
-		  <ul>
-		    {% for hotel in all_hotels %}
-		      <li>{{hotel.name}}</li>
-		    {% endfor %}
-		  </ul>
-		{% else %}
-		  There are no hotels.
-		{% endif %}
-		</ul>
+				<div class="panel panel-default">
+				 	<div id="top-panel" class="panel-body">
+						<div class="selectcategory clearfix"> 
+					    <label>Hotels</label>
+					    	<select>
+						    {% for hotel in all_hotels %}
+						      <option>{{hotel.name}}</option>
+						    {% endfor %}
+						  </select>
+						  <a> <i class="fa fa-plus-circle"></i></a>
+						</div>
 
-		<h1>RESTAURANTS</h1>
-		 <ul>
-		{% if all_restaurants.length > 0 %}
-		  <ul>
-		    {% for restaurant in all_restaurants %}
-		      <li>{{restaurant.name}}</li>
-		    {% endfor %}
-		  </ul>
-		{% else %}
-		  There are no restaurants.
-		{% endif %}
-		</ul>
+						<div class="selectcategory clearfix">
+						 <label>Restaurants</label>
+							<select>
+							    {% for restaurant in all_restaurants %}
+							      <option>{{restaurant.name}}</option>
+							    {% endfor %}
+						    </select>
+						    <a> <i class="fa fa-plus-circle"></i></a>
+					    </div>
 
-		<h1>THINGS TO DO</h1>
- 		<ul>
-		{% if all_things_to_do.length > 0 %}
-		  <ul>
-		    {% for thingtodo in all_things_to_do %}
-		      <li>{{thingtodo.name}}</li>
-		    {% endfor %}
-		  </ul>
-		{% else %}
-		  There are no things to do.
-		{% endif %}
-		</ul>
+						<div class="selectcategory clearfix">
+						    <label>Things To Do</label>
+						    <select>
+							    {% for thingtodo in all_things_to_do %}
+							      <option>{{thingtodo.name}}</option>
+							    {% endfor %}
+						  	</select>
+						  	<a> <i class="fa fa-plus-circle"></i></a>
+					  	</div>
 
+				 	</div>
+				</div><!-- panel-->
 
-</div>
-</div>
+			</div><!-- end col-sm-6-->
+
+			<div class="our-col-sm-6">
+
+				<div class="datedisplay"> <span>Day 1<i class="fa fa-times-circle"></i> </span> </div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<ul class="pagination">
+							<li><a href="#">1</a></li>
+							<li class="active"><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">+</a></li>
+						</ul>
+
+					</div>
+					<div id="myDayListPanel"class="panel-body">
+					    <div class="selectcategory clearfix"> 
+					    <label>My Hotels</label>
+					    	<ul >
+						      <li>Andaz Wall Street</li>
+						  		<a> <i class="fa fa-times-circle"></i></a>
+						  </ul>
+						</div>
+
+						<div class="selectcategory clearfix">
+						 <label>My Restaurants</label>
+							<ul>
+							      <li>Bouley</li>
+						    	<a> <i class="fa fa-times-circle"></i></a>
+						    </ul>
+					    </div>
+
+						<div class="selectcategory clearfix">
+						    <label>My Things To Do</label>
+						    <ul>
+							      <li>South Street Seaport</li>
+						  		<a> <i class="fa fa-times-circle"></i></a>
+						  	</ul>
+					  	</div>
+					</div>
+				</div> <!-- panel -->
+
+			</div><!-- end col-sm-6-->
+
+		</div> <!-- col-lg-3-->
+	</div> <!-- row-->
+</div> <!-- container-->
 {% endblock%}
 
  	
