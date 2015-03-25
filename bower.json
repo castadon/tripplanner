@@ -2,11 +2,7 @@
   "name": "tripplanner",
   "version": "0.0.0",
   "description": "Trip Planner workshop",
-  "moduleType": [
-    "node"
-  ],
   "license": "MIT",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -17,5 +13,10 @@
   "dependencies": {
     "jquery": "~2.1.3",
     "bootstrap": "~3.3.4"
-  }
+  },
+  "homepage": "https://github.com/castadon/tripplanner",
+  "authors": [
+    "Miguel Alvarez <mig.alvarez@yahoo.es>"
+  ],
+  "main": "app.js"
 }
