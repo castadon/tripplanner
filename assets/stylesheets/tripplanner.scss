@@ -5,3 +5,61 @@
 body{
 	color:red;
 }
+
+$navbar-color: #A6C6DA;
+$navbar-background: #736357;
+
+.container { width: 100%; }
+.row { height: 100vh; overflow:hidden; padding-top:50px; }
+
+.col-lg-9 {
+	padding: 0;
+}
+
+.col-lg-3 {
+	height: 100%;
+	overflow: auto;
+}
+
+.navbar {
+	position: fixed;
+	top:0;
+	&.navbar-inverse {
+		background: $navbar-background;
+		.container {
+
+			.navbar-brand {
+				color: $navbar-color;
+				&:hover {
+					color: #FFF;
+				}
+				i {
+					display: block;
+					float: left;
+					margin-right: 4px;
+				}
+			}
+
+			.navbar-nav {
+				& > li {
+					& > a {
+						color: $navbar-color;
+						&:hover {
+							color: #FFF;
+						}
+					}
+
+					&.active {
+						a {
+							background: darken($navbar-background, 20%);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.map-canvas {
+	height: 100vh;
+}

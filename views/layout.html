@@ -10,14 +10,62 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/stylesheets/tripplanner.css" rel="stylesheet">
-
   </head>
 
   <body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><i class="fa fa-map-marker"></i>TRIP PLANNER</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
 
  	{% block content%}
  	{% endblock%}
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY_HERE&sensor=true"></script>
+  <script>
+function initialize_gmaps() {
+    // initialize new google maps LatLng object
+    var myLatlng = new google.maps.LatLng(40.705189,-74.009209);
+    // set the map options hash
+    var mapOptions = {
+        center: myLatlng,
+        zoom: 16,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    // get the maps div's HTML obj
+    var map_canvas_obj = document.getElementById("map-canvas");
 
+      // initialize a new Google Map with the options
+      var map = new google.maps.Map(map_canvas_obj, mapOptions);
+      // Add the marker to the map
+      var marker = new google.maps.Marker({
+          position: myLatlng,
+          title:"Hello World!"
+      });
+      // Add the marker to the map by calling setMap()
+      marker.setMap(map);
+}
+
+$(document).ready(function() {
+    initialize_gmaps();
+});
+</script>
   </body>
 </html>

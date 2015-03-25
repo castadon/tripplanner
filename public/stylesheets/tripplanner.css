@@ -3,3 +3,41 @@
 
 body {
   color: red; }
+
+.container {
+  width: 100%; }
+
+.row {
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 50px; }
+
+.col-lg-9 {
+  padding: 0; }
+
+.col-lg-3 {
+  height: 100%;
+  overflow: auto; }
+
+.navbar {
+  position: fixed;
+  top: 0; }
+  .navbar.navbar-inverse {
+    background: #736357; }
+    .navbar.navbar-inverse .container .navbar-brand {
+      color: #A6C6DA; }
+      .navbar.navbar-inverse .container .navbar-brand:hover {
+        color: #FFF; }
+      .navbar.navbar-inverse .container .navbar-brand i {
+        display: block;
+        float: left;
+        margin-right: 4px; }
+    .navbar.navbar-inverse .container .navbar-nav > li > a {
+      color: #A6C6DA; }
+      .navbar.navbar-inverse .container .navbar-nav > li > a:hover {
+        color: #FFF; }
+    .navbar.navbar-inverse .container .navbar-nav > li.active a {
+      background: #39312b; }
+
+.map-canvas {
+  height: 100vh; }

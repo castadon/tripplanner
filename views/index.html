@@ -1,7 +1,15 @@
 {% extends "layout.html" %}
 
- 	{% block content%}
- 	
+{% block content%}
+<div class="container">
+<div class = "row">
+<div class="col-lg-9">
+	<div id="map-canvas" class="map-canvas">
+	</div>
+</div>
+<div class="col-lg-3">
+
+
  		<h1>HOTELS</h1>
  		<ul>
 		{% if all_hotels.length > 0 %}
@@ -42,4 +50,8 @@
 		</ul>
 
 
- 	{% endblock%}
+</div>
+</div>
+{% endblock%}
+
+ 	
